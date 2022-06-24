@@ -21,16 +21,16 @@
         <!-- 布置登录盒子 -->
         <div class="login_box">
             <!-- 登录表单 -->
-            <form class="layui-form" action="">
+            <form class="layui-form" id="loginform">
                 <!-- 登录账号 -->
                 <div class="layui-form-item">
                     <i class="layui-icon layui-icon-username"></i>
-                    <input type="text" name="username" required lay-verify="required" placeholder="请输入账号" autocomplete="off" class="layui-input">
+                    <input type="text" name="username" required lay-verify="username" placeholder="请输入账号" autocomplete="off" class="layui-input">
                 </div>
                 <!-- 登录密码 -->
                 <div class="layui-form-item">
                     <i class="layui-icon layui-icon-password"></i>
-                    <input type="password" name="password" required lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
+                    <input type="password" name="password" required lay-verify="password" placeholder="请输入密码" autocomplete="off" class="layui-input">
                 </div>
                 <!-- 登录按钮 -->
                 <div class="layui-form-item">
@@ -48,21 +48,21 @@
         <!-- 布置注册盒子 -->
         <div class="reg_box">
             <!-- 注册表单 -->
-            <form class="layui-form" action="">
+            <form class="layui-form" action="" id="regform">
                 <!-- 设置账号 -->
                 <div class="layui-form-item">
                     <i class="layui-icon layui-icon-username"></i>
-                    <input type="text" name="username" required lay-verify="required" placeholder="请输入账号" autocomplete="off" class="layui-input">
+                    <input type="text" name="username" required lay-verify="username" placeholder="请输入账号" autocomplete="off" class="layui-input">
                 </div>
                 <!-- 设置登录密码 -->
                 <div class="layui-form-item">
                     <i class="layui-icon layui-icon-password"></i>
-                    <input type="password" name="password" required lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
+                    <input type="password" name="password" required lay-verify="password" placeholder="请输入密码" autocomplete="off" class="layui-input psw">
                 </div>
                 <!-- 再次输入密码 -->
                 <div class="layui-form-item">
                     <i class="layui-icon layui-icon-password"></i>
-                    <input type="password" name="password" required lay-verify="required" placeholder="再次确认密码" autocomplete="off" class="layui-input">
+                    <input type="password" required lay-verify="password|repassword" placeholder="再次确认密码" autocomplete="off" class="layui-input">
                 </div>
 
                 <!-- 登录按钮 -->
@@ -84,6 +84,8 @@
 
     <!-- 导入js文件 -->
     <script src="./assets/lib/jquery.js"></script>
+    <script src="./assets/lib/layui/layui.all.js"></script>
+    <script src="./assets/js/baseAPI.js"></script>
     <script src="./assets/js/login.js"></script>
 </body>
 
